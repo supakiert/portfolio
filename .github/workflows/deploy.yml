@@ -11,9 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install dependencies
-        run: apt install nodejs
-        
+
       - name: Checkout repo
         uses: actions/checkout@v3
 
@@ -21,7 +19,7 @@ jobs:
         uses: actions/setup-node@v3
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        uses: bahmutov/npm-install@v1 --force
 
       - name: Build project
         run: npm run build
