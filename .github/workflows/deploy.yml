@@ -21,7 +21,7 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Install dependencies
-        run: npm i --force
+        run: apt install nodejs
 
       - name: Build project
         run: npm run build
